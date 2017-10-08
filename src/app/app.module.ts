@@ -11,12 +11,12 @@ import { StrategicallianceComponent } from './strategicalliance/strategicallianc
 import { ProductsComponent } from './products/products.component';
 const appRoutes: Routes = [
   { path: 'Home', component: HomeComponent },
-  { path: 'AboutUs', component: HomeComponent },
-  { path: 'Products', component: HomeComponent },
-  { path: 'Manufacturing', component: HomeComponent },
-  { path: 'Quality', component: HomeComponent },
+  { path: 'AboutUs', component: AboutusComponent },
+  { path: 'Products', component: ProductsComponent },
+  { path: 'Manufacturing', component: ManufacturingComponent },
+  { path: 'Quality', component: QualityComponent },
   { path: 'StrategicAlliance', component: StrategicallianceComponent },
-  { path: 'ContactSs', component: HomeComponent },
+  { path: 'ContactUs', component: ContactusComponent },
   { path: '', redirectTo: '/Home', pathMatch: 'full'},
   { path: '**', component: HomeComponent}
 ];
