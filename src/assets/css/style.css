@@ -19,7 +19,7 @@ body {
 	height: 100%;
 }
 body {
-	font-size: 15px;
+	font-size: 13px;
 	line-height: 1.50;
 	color: #333333;
 	background-color: #ffffff;
@@ -39,7 +39,7 @@ h1 {
 	margin-bottom: 20px;
 }
 h2 {
-	font-size: 28px;
+	font-size: 26px;
 	margin-bottom: 15px;
 }
 h3 {
@@ -474,7 +474,7 @@ textarea {
 .main-navigation .navbar-default .navbar-nav > li > a {
 	color: #838383;
 	padding: 10px 20px;
-	font-size: 18px;
+	font-size: 14px;
 	font-weight: 300;
 }
 .main-navigation .navbar-default .navbar-nav > li.active > a {
@@ -563,6 +563,7 @@ textarea {
 .logo,
 .site-name-and-slogan {
 	float: left;
+	margin: 5px 0px ;
 }
 .site-name {
 	font-size: 36px;
@@ -777,4 +778,49 @@ textarea {
 }
 .blue-section{
 	background-color: #2f3192;
+}
+.header{
+	position: fixed;
+	z-index: 1;
+	width: 100%;
+	border: none;
+}
+.main-content{
+	position: absolute;
+	padding-top: 83px;
+}
+.Innotb {
+    background: #383838;
+    color: #ffffff;
+    line-height: 22px;
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background: url(http://ahemlifecare.com/images/slide-01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-size: cover;
+    margin: o;
+    width: 100%;
+	position: relative;
+}
+.Innotb ul {
+	line-height: 35px;
+}
+.titleline-center {
+    position: relative;
+    max-width: 200px;
+    border-top: 1px solid #ffffff;
+	margin: 0 auto 30px;
+}
+#overlay {
+    position: absolute; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    cursor: pointer; /* Add a pointer on hover */
 }
