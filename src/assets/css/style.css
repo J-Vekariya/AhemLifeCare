@@ -9,7 +9,7 @@ File Description:Main CSS file of the template */
 /* Typography
 ----------------------------------------------------------------------------- */
 body {
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway', 'Open Sans', sans-serif;
 }
 .site-name {
 	font-family: 'Raleway', sans-serif;
@@ -786,7 +786,6 @@ textarea {
 	border: none;
 }
 .main-content{
-	position: absolute;
 	padding-top: 83px;
 }
 .Innotb {
@@ -824,3 +823,50 @@ textarea {
     background-color: rgba(0,0,0,0.5); /* Black background with opacity */
     cursor: pointer; /* Add a pointer on hover */
 }
+.dropcap-theme {
+    float: left;
+    color: #ffffff;
+    font-size: 39px;
+    line-height: 50px;
+    font-weight: bold;
+    padding: 0px 13px;
+    margin: 0px 10px 0 0;
+	background: #528fcc;
+}
+.titleline {
+    position: relative;
+    max-width: 200px;
+    border-top: 1px solid #2f3192;
+    margin: 0 auto 30px 0;
+}
+.titleline:after {
+    position: absolute;
+    top: -3px;
+    left: 0%;
+    right: 70%;
+    content: '';
+    border-top: 5px solid#2f3192;
+}
+
+.about-us .blue-section h3{
+	text-align: center;
+}
+.about-us .breadcrumb{
+	text-align: center;
+	background: none;
+}
+.Lowertb {
+    background: #22b24c;
+    color: #ffffff;
+    line-height: 22px;
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.Lowertb h1 {
+    font-size: 26px;
+    font-weight: 450;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+}
+/*   Manufacturing  */ 
