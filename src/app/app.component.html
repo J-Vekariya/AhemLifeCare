@@ -58,26 +58,26 @@
 						<!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
 							<ul class="nav navbar-nav navbar-right">
-								<li class="active">
-									<a routerLink="/Home">Home</a>
+								<li [ngClass]="currentTab=='home'?'active':''">
+									<a routerLink="/Home" (click)="currentTab='home'">Home</a>
 								</li>
-								<li>
-									<a routerLink="/AboutUs">About Us</a>
+								<li [ngClass]="currentTab=='about'?'active':''">
+									<a routerLink="/AboutUs" (click)="currentTab='about'">About Us</a>
 								</li>
-								<li>
-									<a routerLink="/">Products</a>
+								<li [ngClass]="currentTab=='product'?'active':''">
+									<a routerLink="/" (click)="currentTab='product'">Products</a>
 								</li>
-								<li>
-									<a routerLink="/Manufacturing">Manufacturing</a>
+								<li [ngClass]="currentTab=='manufacturing'?'active':''">
+									<a routerLink="/Manufacturing" (click)="currentTab='manufacturing'">Manufacturing</a>
 								</li>
-								<li>
-									<a routerLink="/Quality">Quality</a>
+								<li [ngClass]="currentTab=='quality'?'active':''">
+									<a routerLink="/Quality" (click)="currentTab='quality'">Quality</a>
 								</li>
-								<li>
-									<a routerLink="/StrategicAlliance">Strategic Alliance</a>
+								<li [ngClass]="currentTab=='strategic'?'active':''">
+									<a routerLink="/StrategicAlliance" (click)="currentTab='strategic'">Strategic Alliance</a>
 								</li>
-								<li>
-									<a routerLink="/ContactUs">Contact Us</a>
+								<li [ngClass]="currentTab=='contactus'?'active':''">
+									<a routerLink="/ContactUs" (click)="currentTab='contactus'">Contact Us</a>
 								</li>
 							</ul>
 						</div>
@@ -128,13 +128,13 @@
 			
 			<div class="col-md-6">
 			  <ul class="copyright-link">
-				<li><a routerLink="/Home">Home</a></li>
-				<li><a routerLink="/AboutUs">About Us </a></li>
-				<li><a routerLink="/">Products</a></li>
-				<li><a routerLink="/Mannufacturing">Manufacturing</a></li>
-				<li><a routerLink="/Quality">Quality</a></li>
-				<li><a routerLink="/StrategicAlliance">Strategic Alliance</a></li>
-				<li><a routerLink="/ContactUs">Contact Us</a></li>
+				<li><a routerLink="/Home" (click)="currentTab='home'">Home</a></li>
+				<li><a routerLink="/AboutUs" (click)="currentTab='about'">About Us </a></li>
+				<li><a routerLink="/" (click)="currentTab='product'">Products</a></li>
+				<li><a routerLink="/Mannufacturing" (click)="currentTab='manufacturing'">Manufacturing</a></li>
+				<li><a routerLink="/Quality" (click)="currentTab='quality'">Quality</a></li>
+				<li><a routerLink="/StrategicAlliance" (click)="currentTab='strategic'">Strategic Alliance</a></li>
+				<li><a routerLink="/ContactUs" (click)="currentTab='contactus'">Contact Us</a></li>
 			  </ul>
 			</div>
 			<!-- end .col-md-4 --> 
