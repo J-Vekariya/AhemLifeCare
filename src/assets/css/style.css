@@ -482,7 +482,7 @@ blockquote {
     border: 1px solid #cacaca;
     color: #666666;
     font-size: 12px;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
     font-weight: 300;
 }
 
@@ -1209,18 +1209,24 @@ textarea {
 .contact-content {
     padding-top: 10px
 }
-.nav-stacked > li + li {
+
+.nav-stacked>li+li {
     margin-top: 3px !important;
 }
 
+
 /*   Manufacturing  */
 
-.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus, .nav-pills>li>a:hover {
+.nav-pills>li.active>a,
+.nav-pills>li.active>a:hover,
+.nav-pills>li.active>a:focus,
+.nav-pills>li>a:hover {
     background-color: #303291;
     border-color: #303291;
     color: #ffffff;
     border-radius: 2px;
 }
+
 .nav-pills>li>a {
     padding: 8px 10px !important;
 }
