@@ -941,6 +941,7 @@ textarea {
 
 .blue-section {
     background-color: #2f3192;
+    padding: 45px !important;
 }
 
 .header {
@@ -1208,6 +1209,18 @@ textarea {
 .contact-content {
     padding-top: 10px
 }
-
+.nav-stacked > li + li {
+    margin-top: 3px !important;
+}
 
 /*   Manufacturing  */
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus, .nav-pills>li>a:hover {
+    background-color: #303291;
+    border-color: #303291;
+    color: #ffffff;
+    border-radius: 2px;
+}
+.nav-pills>li>a {
+    padding: 8px 10px !important;
+}
