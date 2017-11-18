@@ -1,6 +1,8 @@
 const express = require('express')
 const path = require('path')
 const app = express()
+const http = require('http');
+
 app.use('/',express.static(path.join(__dirname, 'dist')));
 // app.get('/', function (req, res) {
 //   res.send('Hello World!')
@@ -13,6 +15,8 @@ app.use('*',function(req,res){
   console.log(req);
   res.sendFile(path.join(__dirname,'dist/index.html'));
 })
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
-})
+
+const port = process.env.PORT || '3000';
+app.set('port',port);
+const server = http.createServer(app);
+server.listen(port,()=>{console.log('Example app listening on port 3000!')})
