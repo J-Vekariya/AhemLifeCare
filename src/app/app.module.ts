@@ -9,6 +9,7 @@ import { QualityComponent } from './quality/quality.component';
 import { ManufacturingComponent } from './manufacturing/manufacturing.component';
 import { StrategicallianceComponent } from './strategicalliance/strategicalliance.component';
 import { ProductsComponent } from './products/products.component';
+import { LoginComponent } from './login/login.component';
 const appRoutes: Routes = [
   { path: 'Home', component: HomeComponent },
   { path: 'AboutUs', component: AboutusComponent },
@@ -17,6 +18,7 @@ const appRoutes: Routes = [
   { path: 'Quality', component: QualityComponent },
   { path: 'StrategicAlliance', component: StrategicallianceComponent },
   { path: 'ContactUs', component: ContactusComponent },
+  { path: 'login', component: LoginComponent},
   { path: '', redirectTo: '/Home', pathMatch: 'full'},
   { path: '**', component: HomeComponent}
 ];
@@ -30,10 +32,11 @@ const appRoutes: Routes = [
     QualityComponent,
     ManufacturingComponent,
     StrategicallianceComponent,
-    ProductsComponent
+    ProductsComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({appId: 'ang4-seo-pre'}),
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
