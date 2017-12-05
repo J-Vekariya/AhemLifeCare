@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "postinstall": "npm run start"
+    "postinstall": "npm install && npm run start"
   },
   "engines": {
     "node": "8.2.1",
