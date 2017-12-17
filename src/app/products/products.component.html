@@ -1,3 +1,153 @@
-<p>
-  products works!
-</p>
+<div class="main-content about-us">
+  <div class="blue-section">
+    <div class="container">
+      <div class="row wow fadeInUp" style="color:white; visibility: visible; ">
+        <div class="col-md-12">
+          <h3>Products</h3>
+          <ul class="breadcrumb">
+            <li>
+              <a href="index.html">
+                <i class="fa fa-home"></i>Home</a>
+            </li>
+            <li class="active">Products</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <h3>{{subCategory.name | titlecase}}</h3>
+        <div class="titleline"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-9" *ngIf="category.name === 'pharmaceutical'">
+          <table class="table table-striped table-bordered table-condensed">
+            <thead>
+              <tr>
+                <th>No.</th>
+                <th>Product</th>
+                <th>Strength</th>
+                <th>Presentation</th>
+                <th>Therapeutic Group</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of products; let i = index">
+                <td>{{i + 1}}</td>
+                <td>{{product.product}}</td>
+                <td>{{product.strength}}</td>
+                <td>{{product.presentation}}</td>
+                <td>{{product.therapeutic_group}}</td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+        <div class="col-md-9" *ngIf="category.name === 'nutraceutical'">
+
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                  <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Why is it better
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                  <ul>
+                    <li>The titles are block, so you don't have to click the text part to activate it</li>
+                    <li>Indicators for expand / collapsing items</li>
+                    <li>Removed title links' obnoxious :hover underlinings, and outlines.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingTwo">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+                    aria-controls="collapseTwo">
+                    Collapsible Group Item #2
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                  sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                  vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                  haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="panel panel-default">
+              <div class="panel-heading" role="tab" id="headingThree">
+                <h4 class="panel-title">
+                  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false"
+                    aria-controls="collapseThree">
+                    Collapsible Group Item #3
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
+                  non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor,
+                  sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
+                  helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher
+                  vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably
+                  haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-9" *ngIf="category.name === 'ayurveda'">
+            <table class="table table-striped table-bordered table-condensed">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Ingredients</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let product of products; let i = index">
+                  <td>{{i + 1}}</td>
+                  <td>{{product.name}}</td>
+                  <td>{{product.ingredients}}</td>
+                </tr>
+              </tbody>
+            </table>
+  
+          </div>
+        <!-- end .col-md-9 -->
+
+        <!-- SIDEBAR START -->
+        <div class="col-md-3">
+          <div class="sidebar cart-sidebar">
+            <h3>{{category.name | titlecase}} Products</h3>
+            <ul class="sidebar-list">
+              <li *ngFor="let subCat of subCategories">
+                <i class="fa fa-chevron-circle-right"></i>
+                <a href="MusculoSD.html">{{subCat.name | titlecase}}</a>
+              </li>
+            </ul>
+          </div>
+          <!-- end .sidebar -->
+        </div>
+        <!-- end .col-md-3 -->
+        <!-- SIDEBAR END -->
+      </div>
+    </div>
+    <!-- end .row -->
+  </div>
+</div>

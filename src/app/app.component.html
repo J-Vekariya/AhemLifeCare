@@ -5,125 +5,157 @@
 <!-- header start -->
 <!-- ================ -->
 <header class="header navbar fixed-top clearfix  ">
-<!-- <div class="container"> -->
-<div class="row">
-	<div class="col-md-2 col-sm-10 ahem-logo">
+	<!-- <div class="container"> -->
+	<div class="row">
+		<div class="col-md-2 col-sm-10 ahem-logo">
 
-		<!-- header-left start -->
-		<!-- ================ -->
-		<div class="header-left clearfix">
+			<!-- header-left start -->
+			<!-- ================ -->
+			<div class="header-left clearfix">
 
-			<!-- logo -->
-			<div class="logo smooth-scroll">
-				<a href="#banner">
-					<img id="logo" src="http://ahemlifecare.com/images/logo.png" alt="Ahem Life Care" style="height: 74px;width: 120px;">
-				</a>
-			</div>
+				<!-- logo -->
+				<div class="logo smooth-scroll">
+					<a href="#banner">
+						<img id="logo" src="http://ahemlifecare.com/images/logo.png" alt="Ahem Life Care" style="height: 74px;width: 120px;">
+					</a>
+				</div>
 
-			<!-- name-and-slogan
+				<!-- name-and-slogan
 						<div class="site-name-and-slogan smooth-scroll">
 							<div class="site-name"><a href="#banner">Worthy</a></div>
 							<div class="site-slogan">Free Bootstrap Theme by <a target="_blank" href="http://htmlcoder.me">HtmlCoder</a></div>
 						</div> -->
 
+			</div>
+			<!-- header-left end -->
+
 		</div>
-		<!-- header-left end -->
+		<div class="col-md-10 col-sm-1">
 
-	</div>
-	<div class="col-md-10 col-sm-1">
-
-		<!-- header-right start -->
-		<!-- ================ -->
-		<div class="header-right clearfix">
-
-			<!-- main-navigation start -->
+			<!-- header-right start -->
 			<!-- ================ -->
-			<div class="main-navigation animated">
+			<div class="header-right clearfix">
 
-				<!-- navbar start -->
+				<!-- main-navigation start -->
 				<!-- ================ -->
-				<nav class="navbar navbar-default" role="navigation">
-					<div class="container-fluid">
+				<div class="main-navigation animated">
 
-						<!-- Toggle get grouped for better mobile display -->
-						<div class="navbar-header">
-							<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
-								<span class="sr-only">Toggle navigation</span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-							</button>
+					<!-- navbar start -->
+					<!-- ================ -->
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="container-fluid">
+
+							<!-- Toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+								<ul class="nav navbar-nav navbar-right">
+									<li [ngClass]="currentTab=='home'?'active':''">
+										<a routerLink="/Home" (click)="currentTab='home'">Home</a>
+									</li>
+									<li [ngClass]="currentTab=='aboutus'?'active':''">
+										<a routerLink="/AboutUs" (click)="currentTab='aboutus'">About Us</a>
+									</li>
+									<li [ngClass]="currentTab=='products'?'active':''" class="dropdown">
+										<a id="productMenu" (click)="currentTab='products'" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown">Products
+											<span class="caret"></span>
+										</a>
+										<ul class="dropdown-menu">
+											<li class="dropdown-submenu" *ngFor="let category of categories">
+												<a class="test" tabindex="-1">{{category.name | titlecase}}
+													<span class="caret" *ngIf="subCategories[category._id].length "></span>
+												</a>
+												<ul class="dropdown-menu"  *ngIf="subCategories[category._id].length ">
+													<li *ngFor="let subCat of subCategories[category._id]">
+														<a tabindex="-1" (click)="openProducts(subCat,category)">{{subCat.name | titlecase}}</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+									<li [ngClass]="currentTab=='manufacturing'?'active':''">
+										<a routerLink="/Manufacturing" (click)="currentTab='manufacturing'">Manufacturing</a>
+									</li>
+									<li [ngClass]="currentTab=='quality'?'active':''">
+										<a routerLink="/Quality" (click)="currentTab='quality'">Quality</a>
+									</li>
+									<li [ngClass]="currentTab=='strategicalliance'?'active':''">
+										<a routerLink="/StrategicAlliance" (click)="currentTab='strategicalliance'">Strategic Alliance</a>
+									</li>
+									<li [ngClass]="currentTab=='contactus'?'active':''">
+										<a routerLink="/ContactUs" (click)="currentTab='contactus'">Contact Us</a>
+									</li>
+								</ul>
+							</div>
+
 						</div>
+					</nav>
+					<!-- navbar end -->
 
-						<!-- Collect the nav links, forms, and other content for toggling -->
-						<div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
-							<ul class="nav navbar-nav navbar-right">
-								<li [ngClass]="currentTab=='home'?'active':''">
-									<a routerLink="/Home" (click)="currentTab='home'">Home</a>
-								</li>
-								<li [ngClass]="currentTab=='about'?'active':''">
-									<a routerLink="/AboutUs" (click)="currentTab='about'">About Us</a>
-								</li>
-								<li [ngClass]="currentTab=='product'?'active':''">
-									<a routerLink="/" (click)="currentTab='product'">Products</a>
-								</li>
-								<li [ngClass]="currentTab=='manufacturing'?'active':''">
-									<a routerLink="/Manufacturing" (click)="currentTab='manufacturing'">Manufacturing</a>
-								</li>
-								<li [ngClass]="currentTab=='quality'?'active':''">
-									<a routerLink="/Quality" (click)="currentTab='quality'">Quality</a>
-								</li>
-								<li [ngClass]="currentTab=='strategic'?'active':''">
-									<a routerLink="/StrategicAlliance" (click)="currentTab='strategic'">Strategic Alliance</a>
-								</li>
-								<li [ngClass]="currentTab=='contactus'?'active':''">
-									<a routerLink="/ContactUs" (click)="currentTab='contactus'">Contact Us</a>
-								</li>
-							</ul>
-						</div>
-
-					</div>
-				</nav>
-				<!-- navbar end -->
+				</div>
+				<!-- main-navigation end -->
 
 			</div>
-			<!-- main-navigation end -->
+			<!-- header-right end -->
 
 		</div>
-		<!-- header-right end -->
-
+		<div class="col-xs-1 col-sm-1" id="blankDiv"></div>
 	</div>
-	<div class="col-xs-1 col-sm-1"></div>
-</div>
-<!-- </div> -->
+	<!-- </div> -->
 </header>
 <!-- header end -->
-							
+
 
 <router-outlet></router-outlet>
 <div id="copyright">
-		<div class="container">
-		  <div class="row">
+	<div class="container">
+		<div class="row">
 			<div class="col-md-6">
-			  <p>© 2016.  Ahem Life Care . All Rights Reserved. <font size="-2px" style="padding-left:10px">Designed by <a href="http://www.crinnodesigns.com" target="_blank">@ Solutions</a></font></p>
+				<p>© 2016. Ahem Life Care . All Rights Reserved.
+					<font size="-2px" style="padding-left:10px">Designed by
+						<a href="http://www.crinnodesigns.com" target="_blank">@ Solutions</a>
+					</font>
+				</p>
 			</div>
 			<!-- end .col-md-8 -->
-			
+
 			<div class="col-md-6">
-			  <ul class="copyright-link">
-				<li><a routerLink="/Home" (click)="currentTab='home'">Home</a></li>
-				<li><a routerLink="/AboutUs" (click)="currentTab='about'">About Us </a></li>
-				<li><a routerLink="/" (click)="currentTab='product'">Products</a></li>
-				<li><a routerLink="/Mannufacturing" (click)="currentTab='manufacturing'">Manufacturing</a></li>
-				<li><a routerLink="/Quality" (click)="currentTab='quality'">Quality</a></li>
-				<li><a routerLink="/StrategicAlliance" (click)="currentTab='strategic'">Strategic Alliance</a></li>
-				<li><a routerLink="/ContactUs" (click)="currentTab='contactus'">Contact Us</a></li>
-			  </ul>
+				<ul class="copyright-link">
+					<li>
+						<a routerLink="/Home" (click)="currentTab='home'">Home</a>
+					</li>
+					<li>
+						<a routerLink="/AboutUs" (click)="currentTab='about'">About Us </a>
+					</li>
+					<li>
+						<a routerLink="/Products" (click)="currentTab='product'">Products</a>
+					</li>
+					<li>
+						<a routerLink="/Mannufacturing" (click)="currentTab='manufacturing'">Manufacturing</a>
+					</li>
+					<li>
+						<a routerLink="/Quality" (click)="currentTab='quality'">Quality</a>
+					</li>
+					<li>
+						<a routerLink="/StrategicAlliance" (click)="currentTab='strategic'">Strategic Alliance</a>
+					</li>
+					<li>
+						<a routerLink="/ContactUs" (click)="currentTab='contactus'">Contact Us</a>
+					</li>
+				</ul>
 			</div>
-			<!-- end .col-md-4 --> 
-			
-		  </div>
-		  <!-- end .row --> 
+			<!-- end .col-md-4 -->
+
 		</div>
-		<!-- end .container --> 
-	  </div>
+		<!-- end .row -->
+	</div>
+	<!-- end .container -->
+</div>

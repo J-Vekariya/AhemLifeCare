@@ -8,12 +8,12 @@ import { Meta, Title } from "@angular/platform-browser";
 export class HomeComponent implements OnInit {
 
   constructor(meta: Meta, title: Title) {
-    title.setTitle('Home Page');
+    title.setTitle('Home | AhemLifeCare');
 
     meta.addTags([
-      { name: 'author', content: 'Coursetro.com' },
-      { name: 'keywords', content: 'angular seo, angular 4 universal, etc' },
-      { name: 'description', content: 'This is my Angular SEO-based App, enjoy it!' }
+      { name: 'author', content: 'www.ahemlifecare.com' },
+      { name: 'keywords', content: 'Ambroxol Hydrochloride Syrup, Terbutaline Sulphate Syrup, GuaiphenesinSyrup, Dextromethorphan Syrup, SucaralfateOral Suspension, Salbutamol Sulphate,Paracetamol, Pheylephrine Hydrochloride,Chlorpheniramine Malete Suspension, AntacidSuspension.' },
+      { name: 'description', content: '' }
     ]);
   }
 

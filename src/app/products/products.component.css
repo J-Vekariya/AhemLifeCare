@@ -1,0 +1,12 @@
+.cart-sidebar {
+    padding: 0px;
+    margin-bottom: 20px;
+}
+.sidebar-list {
+    padding: 0;
+    list-style: none;
+}
+.sidebar-list li {
+    color: #454545;
+    padding: 8px 2px;
+}
